@@ -1,58 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <link rel="stylesheet" href="cryptocss.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InterLink Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Jawir Coin Dashboard</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafc;
+      color: #111;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+    }
+
+    header img {
+      width: 36px;
+      height: 36px;
+    }
+
+    header .profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #e3e6eb;
+    }
+
+    main {
+      padding: 10px 18px 80px 18px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 10px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 20px;
+      margin-bottom: 18px;
+    }
+
+    .follow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .follow button {
+      background: #111;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .follow button:hover {
+      opacity: 0.9;
+    }
+
+    .coin-stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .coin-value {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .coin-label {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .mine-section {
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .mine-section h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .mine-btn {
+      background: linear-gradient(90deg, gold, #f9e27a);
+      border: none;
+      border-radius: 25px;
+      padding: 12px 20px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-top: 1px solid #e5e5e5;
+      padding: 10px 0;
+      border-radius: 25px 25px 0 0;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    }
+
+    footer button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer img {
+      width: 28px;
+      opacity: 0.6;
+    }
+
+    footer .active img {
+      opacity: 1;
+    }
+
+    @media (min-width: 600px) {
+      main {
+        max-width: 400px;
+        margin: auto;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo">🪙</div>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/6009/6009864.png" alt="Logo">
     <div class="profile"></div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="container">
+  <main>
     <h2>Good Afternoon!</h2>
 
     <div class="card follow">
-      <div class="text">
-        <h3>Follow JAWIR COMMUNITY on  X for JWR Updates</h3>
-        <p>Get information about latest features.</p>
-        <button>Follow Now</button>
+      <div>
+        <strong>Follow X for JawirCoin Updates</strong>
+        <p style="font-size:14px;color:#555;">Get information about latest Jawir features.</p>
+      </div>
+      <button>Follow Now</button>
+    </div>
+
+    <div class="card">
+      <div class="coin-stats">
+        <div>
+          <div class="coin-value">9,090</div>
+          <div class="coin-label">$JWR</div>
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/9464/9464660.png" width="70" alt="coins">
+      </div>
+      <div class="coin-stats">
+        <div>
+          <div class="coin-value">4,157,513</div>
+          <div class="coin-label">Jawir IDs</div>
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/1040/1040234.png" width="70" alt="globe">
       </div>
     </div>
 
-    <div class="stats">
-      <div class="stat-card">
-        <h2>9,090 <span>JAWIR</span></h2>
-      </div>
-      <div class="stat-card">
-        <h2>4,157,513 <span>JAWIR COIN IDs</span></h2>
-      </div>
-    </div>
-
-    <div class="card mine">
-      <h3>Mine JAWWIR COIN to Secure the Human Network!</h3>
-      <button class="gold">Mine JAWIR →</button>
+    <div class="mine-section">
+      <h3>Mine $JWR to Secure the Human Network!</h3>
+      <button class="mine-btn">Mine $JWR →</button>
     </div>
   </main>
 
-  <!-- BOTTOM NAVIGATION -->
-  <nav class="bottom-nav">
-    <div class="nav-item">🌍</div>
-    <div class="nav-item active">🏠</div>
-    <div class="nav-item">🛍️</div>
-    <div class="nav-item">🔗</div>
-  </nav>
+  <footer>
+    <button><img src="https://cdn-icons-png.flaticon.com/512/44/44386.png" alt="globe"></button>
+    <button class="active"><img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="home"></button>
+    <button><img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="store"></button>
+    <button><img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="user"></button>
+  </footer>
 
 </body>
 </html>
-
-
-
-
